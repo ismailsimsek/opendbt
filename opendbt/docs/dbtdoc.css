@@ -1,0 +1,6 @@
+
+
+hide {display:none}
+
+div.switch:nth-child(1) {display: none;}
+div.switch:nth-child(3) {display: none;}
