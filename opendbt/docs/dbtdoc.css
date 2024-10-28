@@ -1,6 +1,29 @@
-
-
 hide {display:none}
 
 div.switch:nth-child(1) {display: none;}
 div.switch:nth-child(3) {display: none;}
+
+.panel-body {
+  padding: 5px;
+}
+.panel {
+  padding: 0px 0px;
+}
+h6 {
+  margin-bottom: 0px;
+}
+.nav-tabs>li>a,
+.nav-tabs>li>span {
+  padding:0rem 0;
+}
+.table>thead>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>th,
+.table>tbody>tr>td,
+.table>tfoot>tr>th,
+.table>tfoot>tr>td {
+  padding:.6785714286rem 1.25rem;
+  line-height:1.6;
+  vertical-align:top;
+  border-top:1px solid rgba(0,30,60,0.075)
+  }
