@@ -5,6 +5,7 @@ from setuptools import setup, find_packages
 
 setup_py_dir = pathlib.Path(__file__).parent
 os.chdir(setup_py_dir)
+from opendbt.__version__ import version
 
 setup(
     name='opendbt',
@@ -13,7 +14,7 @@ setup(
             'opendbt = opendbt:main',
         ],
     },
-    version='0.5.0',
+    version=version,
     packages=find_packages(),
     author="Memiiso Organization",
     description='Python opendbt',
