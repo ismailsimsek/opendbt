@@ -1,4 +1,4 @@
-name: Python Auto Version Tag
+name: Create Release Tag
 
 on:
   push:
@@ -14,6 +14,6 @@ jobs:
         # uses: samamorgan/action-autotag-python@master
         uses: Jorricks/action-python-autotagging@1.0.1
         with:
-          path: opendbt/__version__.py
+          path: setup.py
           variable: version
           github_token: ${{ secrets.GITHUB_TOKEN }}
