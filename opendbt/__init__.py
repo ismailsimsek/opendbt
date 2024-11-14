@@ -1,4 +1,3 @@
-import argparse
 import logging
 import os
 import sys
@@ -93,9 +92,12 @@ class OpenDbtProject(OpenDbtLogger):
 
         if use_subprocess:
             shell = False
-            self.log.info("Working dir is %s" % os.getcwd())
-            self.log.info("Running command (shell=%s) `%s`" % (shell, " ".join(command)))
-            Utils.runcommand(command=['opendbt'] + run_args)
+            self.log.info(f"Working dir: {os.getcwd()}")
+            py_executable = sys.executable if sys.executable else 'python'
+            self.log.info(f"Python executable: {py_executable}")
+            __command = [py_executable, '-m', 'opendbt'] + run_args
+            self.log.info(f"Running command (shell={shell}) `{' '.join(__command)}`")
+            Utils.runcommand(command=__command)
             return None
         else:
             self.log.info(f"Running `dbt {' '.join(run_args)}`")
@@ -117,13 +119,3 @@ class OpenDbtProject(OpenDbtLogger):
     def generate_docs(self, args: list = None):
         _args = ["generate"] + args if args else []
         self.run(command="docs", args=_args)
-
-
-def main():
-    p = argparse.ArgumentParser()
-    _, args = p.parse_known_args()
-    OpenDbtCli.run(args=args)
-
-
-if __name__ == "__main__":
-    main()
