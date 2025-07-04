@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dbtToolkitSettings">
+    <option name="dbtProject">
+      <map>
+        <entry key="clean-targets">
+          <value>
+            <Object />
+          </value>
+        </entry>
+        <entry key="models">
+          <value>
+            <Object />
+          </value>
+        </entry>
+        <entry key="name">
+          <value>
+            <Object />
+          </value>
+        </entry>
+        <entry key="profile">
+          <value>
+            <Object />
+          </value>
+        </entry>
+        <entry key="version">
+          <value>
+            <Object />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="dbtProjectName" value="dbtfinance" />
+    <option name="dbtProjectsDir" value="$PROJECT_DIR$/tests/resources/dbtfinance" />
+    <option name="dbtTargetDir" value="$PROJECT_DIR$/tests/resources/dbtfinance/target" />
+    <option name="initialSettingsAreSet" value="true" />
+    <option name="settingsDbtProjectDir" value="$PROJECT_DIR$/tests/resources/dbtcore" />
+    <option name="settingsDbtTargetDir" value="$PROJECT_DIR$/tests/resources/dbtcore/target" />
+  </component>
+</project>

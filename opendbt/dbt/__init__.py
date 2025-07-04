@@ -21,6 +21,7 @@ try:
         RuntimePatcher(module_name="dbt.task.docs").patch_attribute(attribute_name="DOCS_INDEX_FILE_PATH",
                                                                     new_value=OPENDBT_INDEX_HTML_FILE.as_posix())
         from opendbt.dbt.v18.adapters.factory import OpenDbtAdapterContainer
+        from opendbt.dbt.v18.compilation import OpendbtCompiler
         from opendbt.dbt.v18.task.docs.generate import OpenDbtGenerateTask
         from opendbt.dbt.v18.config.runtime import OpenDbtRuntimeConfig
         from opendbt.dbt.v18.task.run import OpenDbtModelRunner
